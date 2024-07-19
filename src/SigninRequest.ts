@@ -153,7 +153,7 @@ export class SigninRequest {
         }
 
         return new SigninRequest({
-            url: parsedUrl.href,
+            url: parsedUrl.href.replace(/\+/g,"%20"),
             state,
         });
     }
